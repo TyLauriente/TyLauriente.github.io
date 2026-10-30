@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <script src="./replay.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark light" />
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg" />
+    <link rel="icon" type="image/png" href="/icons/icon-192.png" />
+    <link rel="apple-touch-icon" href="/icons/icon-192.png" />
+    <meta name="theme-color" content="#0b0b0c" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <title>Portfolio dashboard demo · Ty Lauriente</title>
+    <script>
+      // dark unless the owner picked light or the system's setting (Settings → Appearance); before the first paint
+      try {
+        const t = localStorage.getItem('pt.theme') || 'dark'
+        const dark = t === 'dark' || (t === 'system' && matchMedia('(prefers-color-scheme: dark)').matches)
+        document.documentElement.classList.toggle('dark', dark)
+      } catch (e) {}
+    </script>
+    <script type="module" crossorigin src="./assets/index-BJTHsghi.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/layout-0OK2-Xc-.js">
+    <link rel="modulepreload" crossorigin href="./assets/lock-B_9Um7dP.js">
+    <link rel="modulepreload" crossorigin href="./assets/info-tBIYDLYJ.js">
+    <link rel="modulepreload" crossorigin href="./assets/waves-horizontal-CMf_upsy.js">
+    <link rel="modulepreload" crossorigin href="./assets/x-cHCfqgFZ.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-DEJR98ND.js">
+    <link rel="modulepreload" crossorigin href="./assets/Logo-BHCyuVjU.js">
+    <link rel="modulepreload" crossorigin href="./assets/methods-DzITvDKc.js">
+    <link rel="modulepreload" crossorigin href="./assets/calc-CJsBGjRx.js">
+    <link rel="modulepreload" crossorigin href="./assets/lib-n8sqRvlY.js">
+    <link rel="modulepreload" crossorigin href="./assets/theme-DW8ecMLr.js">
+    <link rel="modulepreload" crossorigin href="./assets/TimeChart-C8zKs3gZ.js">
+    <link rel="modulepreload" crossorigin href="./assets/skeleton-WHD-c8rx.js">
+    <link rel="stylesheet" crossorigin href="./assets/index-BKz-K48D.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

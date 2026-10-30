@@ -1,0 +1,117 @@
+/* Resume site. Same identity as the PDF: the black name block, the tally-red rule, Archivo and IBM Plex Mono.
+   Layout follows Ty's design language: on a PC the whole resume fits the window (no page scroll, three columns,
+   a column scrolls on its own only if it has to); on a phone the columns become tabs at thumb height. */
+@font-face { font-family: "Archivo"; src: url("fonts/archivo-reg.woff") format("woff"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Archivo"; src: url("fonts/archivo-semi.woff") format("woff"); font-weight: 500; font-display: swap; }
+@font-face { font-family: "Archivo"; src: url("fonts/archivo-bold.woff") format("woff"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "Archivo Cond"; src: url("fonts/archivo-cond.woff") format("woff"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "Archivo XCond"; src: url("fonts/archivo-xcond.woff") format("woff"); font-weight: 800; font-display: swap; }
+@font-face { font-family: "Plex Mono"; src: url("fonts/IBMPlexMono-Regular.woff") format("woff"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Plex Mono"; src: url("fonts/IBMPlexMono-Medium.woff") format("woff"); font-weight: 500; font-display: swap; }
+
+:root {
+  --ink: #121211; --ink-2: #4a4a44; --ink-3: #7d7d74; --paper: #f4f3ee; --card: #fffefa; --rule: #d6d5cb;
+  --tally: #d8241b; --mark: #ffe9a8; --mark-ink: #121211;
+  --s1: 4px; --s2: 8px; --s3: 12px; --s4: 16px; --s5: 24px; --s6: 32px;
+  --mono: "Plex Mono", ui-monospace, monospace; --sans: "Archivo", system-ui, sans-serif;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --ink: #ecebe4; --ink-2: #b8b7ad; --ink-3: #8a8a80; --paper: #11110f; --card: #1a1a17; --rule: #2e2e2a;
+          --mark: #5a4710; --mark-ink: #fff6d6; }
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body { display: grid; grid-template-rows: auto minmax(0, 1fr); grid-template-columns: minmax(0, 1fr); overflow: hidden; background: var(--paper); color: var(--ink);
+  font: 400 14.5px/1.5 var(--sans); -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+h2 { margin: var(--s4) 0 var(--s2); padding-top: var(--s2); border-top: 2px solid var(--ink);
+  font: 500 11px/1.2 var(--mono); text-transform: uppercase; letter-spacing: .08em; }
+.col > h2:first-child { margin-top: 0; }
+.hint { margin-left: var(--s2); color: var(--ink-3); text-transform: none; letter-spacing: 0; font-weight: 400; }
+
+/* header */
+.top { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: var(--s3) var(--s5);
+  padding: var(--s4) var(--s5) var(--s3); border-bottom: 1px solid var(--rule); }
+.name { display: inline-block; margin: 0; padding: 4px 9px 0 8px; background: var(--ink); color: var(--paper);
+  font: 800 40px/1 "Archivo XCond", var(--sans); text-transform: uppercase; letter-spacing: -.01em; }
+.role { width: fit-content; max-width: 100%; margin: 0; padding: 5px 9px 4px; background: var(--tally); color: #fff;
+  font: 500 11px/1.2 var(--mono); text-transform: uppercase; letter-spacing: .06em; }
+.links { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s2) var(--s3); font: 400 12.5px/1.3 var(--mono); }
+.links a { text-decoration: none; color: var(--ink-2); }
+.links a:hover, .links a:focus-visible { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+.btn { padding: 6px 12px; border: 1.5px solid var(--ink); border-radius: 6px; background: var(--ink); color: var(--paper) !important;
+  font-weight: 500; transition: transform .12s ease, background .12s ease; }
+.btn:hover { transform: translateY(-1px); text-decoration: none !important; }
+.btn.ghost { background: transparent; color: var(--ink) !important; }
+
+/* three columns that fit the window */
+main { display: grid; grid-template-columns: minmax(250px, .95fr) minmax(400px, 1.75fr) minmax(300px, 1.15fr);
+  gap: var(--s5); padding: var(--s4) var(--s5) var(--s4); min-height: 0; }
+.col { min-height: 0; overflow: auto; scrollbar-width: thin; padding-right: var(--s1); }
+.summary { margin: 0; }
+.note { margin: 0 0 var(--s3); color: var(--ink-2); font-size: 13px; }
+
+.glance { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s2); margin: 0; }
+.glance div { padding: var(--s2) var(--s3); background: var(--card); border: 1px solid var(--rule); border-radius: 8px; }
+.glance dt { font: 700 22px/1.1 "Archivo Cond", var(--sans); }
+.glance dd { margin: 2px 0 0; color: var(--ink-2); font-size: 12.5px; line-height: 1.3; }
+
+.skills { display: flex; flex-direction: column; gap: var(--s2); }
+.skills p { margin: 0; }
+.skills b { display: block; margin-bottom: 3px; font: 500 11px/1.2 var(--mono); text-transform: uppercase; letter-spacing: .05em; color: var(--ink-2); }
+.chip { display: inline-block; margin: 0 4px 5px 0; padding: 2px 8px; border: 1px solid var(--rule); border-radius: 999px;
+  background: var(--card); font-size: 12.5px; cursor: default; transition: border-color .12s, background .12s; }
+.chip[data-hits]:hover, .chip[data-hits]:focus-visible, .chip.on { border-color: var(--tally); outline: none; }
+.chip[data-hits]::after { content: attr(data-hits); margin-left: 5px; color: var(--ink-3); font: 400 10.5px var(--mono); }
+
+/* experience */
+.job { margin: 0 0 var(--s4); }
+.job__head { display: flex; justify-content: space-between; align-items: baseline; gap: var(--s3); }
+.job__org { margin: 0; font: 700 19px/1.2 "Archivo Cond", var(--sans); }
+.job__org span { color: var(--ink-2); }
+.job__when, .job__title { font: 400 11.5px/1.4 var(--mono); color: var(--ink-2); }
+.job__when { white-space: nowrap; }
+.job__title { margin: 2px 0 var(--s2); text-transform: uppercase; letter-spacing: .04em; }
+ul { margin: 0; padding-left: 16px; }
+li { margin: 0 0 6px; padding-left: 2px; border-radius: 4px; transition: background .15s ease; }
+li::marker { color: var(--tally); }
+li.lit, .proj.lit { background: var(--mark); color: var(--mark-ink); box-shadow: 0 0 0 3px var(--mark); }
+
+/* projects */
+.proj { margin: 0 0 var(--s3); padding: var(--s3); background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  transition: border-color .15s ease, box-shadow .15s ease; }
+.proj:hover { border-color: var(--ink-3); }
+.proj h3 { margin: 0; font: 700 17px/1.2 "Archivo Cond", var(--sans); }
+.proj .meta { display: block; margin: 2px 0 6px; font: 400 11.5px var(--mono); color: var(--ink-2); }
+.proj p { margin: 0; font-size: 13.5px; }
+.demo { display: block; margin: var(--s2) 0; border-radius: 8px; overflow: hidden; border: 1px solid var(--rule); position: relative; }
+.demo img { display: block; width: 100%; height: auto; transition: transform .3s ease; }
+.demo:hover img, .demo:focus-visible img { transform: scale(1.02); }
+.demo span { position: absolute; left: 8px; bottom: 8px; padding: 4px 9px; border-radius: 6px; background: var(--tally); color: #fff;
+  font: 500 11.5px/1.2 var(--mono); }
+.real { margin-top: var(--s2); font-size: 12.5px; color: var(--ink-2); }
+.real summary { cursor: pointer; font: 500 11.5px var(--mono); color: var(--ink); }
+.real p { margin: 6px 0 0; font-size: 12.5px; }
+
+.tabs { display: none; }
+
+/* phone and narrow windows: one section at a time, tabs at thumb height */
+@media (max-width: 860px), (max-aspect-ratio: 4/5) {
+  body { grid-template-rows: auto minmax(0, 1fr) auto; }
+  .top { padding: var(--s3) var(--s4) var(--s2); }
+  .name { font-size: 32px; }
+  .role { font-size: 10px; line-height: 1.35; }
+  .id { min-width: 0; }
+  .links { font-size: 12px; }
+  main { display: block; padding: var(--s3) var(--s4); overflow: hidden; }
+  .col { height: 100%; padding-bottom: var(--s4); }
+  .col:not(.on) { display: none; }
+  .tabs { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--rule); background: var(--card);
+    padding-bottom: env(safe-area-inset-bottom); }
+  .tabs a { padding: 13px 0 12px; text-align: center; text-decoration: none; font: 500 12px var(--mono); text-transform: uppercase;
+    letter-spacing: .05em; color: var(--ink-2); border-top: 3px solid transparent; }
+  .tabs a.on { color: var(--ink); border-top-color: var(--tally); }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+@media print { body { display: block; overflow: visible; } .tabs, .links .btn { display: none; } main { display: block; } .col { overflow: visible; } }

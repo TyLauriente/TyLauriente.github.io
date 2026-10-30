@@ -1,0 +1,68 @@
+Ty Lauriente
+
+Software Engineer · C++ · Testing, tooling and live fixes · Vancouver, BC
+
+tlauriente@gmail.com | linkedin.com/in/ty-lauriente-ab923189 | tylauriente.github.io
+
+SUMMARY
+
+Software engineer with 7 years of C++ on large, shipped games: EA SPORTS FC since 2024, and Minecraft at SkyBox Labs before that. When something breaks, I look for what let it happen and fix that, so the same bug can't come back. I work methodically, with tests and soak runs that catch problems before players do, and tools that save other engineers the same work. With AI coding agents, I build systems that check and improve themselves. I've used Wealthsimple for years and it's now my only bank. I've long been into crypto, use DeFi exchanges like Hyperliquid, and build my own finance apps in Wealthsimple's design language.
+
+EXPERIENCE
+
+Electronic Arts · EA SPORTS FC | Oct 2024 - Present
+
+Software Engineer 3, Gameplay · Vancouver, BC
+
+- Own the gameplay code for the scenes that play while the ball is out (subs, celebrations, mascots, managers) on FC 26, FC 27 and the next title, seen by millions of players. Built with animation, audio, presentation and design teams.
+
+- Redesigned how these scenes are chosen, set up, played and skipped as my first task, with a senior engineer's guidance, which made later features easier to add. Checked it with overnight soaks, a pass over every scene, four reviewers and git bisect.
+
+- Traced an assert that kept showing up in soak tests to its cause: two data entries added without their own scene types meant the last two types would always fail a bounds check. Fixing the cause closed both duplicate reports.
+
+- Wrote a Python script that sets up an overnight soak test in one step, still used by other engineers five months later.
+
+- Co-designed a deterministic coin-toss rule: on throw-ins, gameplay skips its own scene half the time and tells other systems, so crowd chants and other teams' scenes play more often with no changes on their side. Built so later conflicts can reuse it.
+
+- Fixed timing bugs before launch and in live patches for FC 26 and FC 27 (5 patch fixes in my first year), like mascots walking through stadium walls. Had a high-priority patch fix in testing about 24 hours after it was escalated, in time for the patch cutoff.
+
+- Wrote the gameplay engineering notes and estimates for three FC 27 feature plans, and reviewed a fourth.
+
+- Won a Peer-to-Peer Recognition Award (Sept 2025), partly for using ChatGPT to learn our animation tools. Shared an AI prompt that documents any area of the code with all gameplay engineers, at a senior engineer's request.
+
+SkyBox Labs · Minecraft | Oct 2019 - Oct 2024
+
+Junior Software Engineer to Software Engineer 3 · Burnaby, BC
+
+- Five years on Minecraft's large, cross-platform C++ codebase: real-time simulation, networking, entity component systems, graphics, and tools, scripts and build pipelines.
+
+- Wrote tests with every change I made, covering the feature, its edge cases and the problems we could see coming. Those tests then blocked any later change, from anyone, that broke the feature.
+
+- Wrote Git Helper, a Python wrapper around Git that sets up a fresh branch from the latest master in one command.
+
+- Fixed release-critical bugs quickly under deadline. Promoted from junior engineer to Software Engineer 2, then 3. Trained new hires, wrote and assigned feature tasks, and took leadership training.
+
+PERSONAL PROJECTS
+
+Built with AI coding agents (Claude Code). I set the goals and rules, decided what had to be tested, and checked the results myself.
+
+Portfolio dashboard (Python, TypeScript · Oct 2026 · live demo: tylauriente.github.io/portfolio-demo)
+A self-hosted live dashboard for my own Wealthsimple portfolio. Prices stream from several sources and turn amber when none has confirmed them for 75 seconds. Each feed runs in its own supervised loop, so a crash restarts the loop and not the service. Applies the superficial-loss rule and CRA limits across accounts. 709 tests.
+
+Claude Code Dashboard (TypeScript, Electron · Oct 2026)
+Runs all my AI coding sessions as live tiles. A read-only watcher checks each session's claims against what actually ran and flags stalls. Rule changes for the agents go on trial and stay only if I end up correcting sessions less.
+
+Crypto trading (Python · Mar - Oct 2026)
+Trading bots for DeFi exchanges (Hyperliquid, and Jupiter on Solana) with backtesting and paper trading. In the latest, an AI agent (Claude) trades a small real-money account on Hyperliquid and Strike Finance. Only one process holds the trading key, every order passes risk checks first, a halt switch stops it, and every action is logged.
+
+SKILLS
+
+Reliability and testing: soak tests, tests that gate later changes, determinism, root cause of timing bugs, git bisect, live patches
+
+Languages and tools: C++, Python, TypeScript and Rust (personal projects), Frostbite, Perforce, Git, Visual Studio, Jira
+
+AI: Claude Code, ChatGPT, Copilot, running several agents in parallel, independent review and automated checks on agent work
+
+EDUCATION
+
+LaSalle College Vancouver · Programming diploma
