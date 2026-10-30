@@ -22,6 +22,8 @@ Software Engineer 3, Gameplay · Vancouver, BC
 
 - Wrote a Python script that sets up a soak test on the latest build in one step, still used by other engineers five months later.
 
+- Built Atlas, a local AI tool that searches our team's Slack and opens on what needs me. Given to a couple of developers so far.
+
 - Co-designed a deterministic coin-toss rule: on throw-ins, gameplay skips its own scene half the time and tells other systems, so crowd chants and other teams' scenes play more often with no changes on their side. Built so later conflicts can reuse it.
 
 - Fixed timing bugs before launch and in live patches for FC 26 and FC 27 (5 patch fixes in my first year), like mascots walking through stadium walls. Had a high-priority patch fix in testing about 24 hours after it was escalated, in time for the patch cutoff.
@@ -34,7 +36,7 @@ SkyBox Labs · Minecraft | Oct 2019 - Oct 2024
 
 Junior Software Engineer to Software Engineer 3 · Burnaby, BC
 
-- Five years on Minecraft's large, cross-platform C++ codebase: real-time simulation, networking, entity component systems, graphics, and tools, scripts and build pipelines.
+- Minecraft's cross-platform C++ codebase: simulation, networking, entity component systems, graphics, build pipelines.
 
 - Wrote tests with every change I made, covering the feature, its edge cases and the problems we could see coming. Those tests then blocked any later change, from anyone, that broke the feature.
 
