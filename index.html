@@ -5,21 +5,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Ty Lauriente · Resume</title>
 <meta name="description" content="Software engineer with 7 years of C++ on large, shipped games: EA SPORTS FC since 2024, and Minecraft at SkyBox Labs before that. When something breaks, I look for what let it happen and fix that, so the same bug can&#x27;t come back. I work methodically, with tests and soak runs that catch problems before players do, and tools that save other engineers the same work. With AI coding agents, I build systems that check and improve themselves. I&#x27;ve used Wealthsimple for years and it&#x27;s now my only bank. I&#x27;ve long been into crypto, use DeFi exchanges like Hyperliquid, and build my own finance apps in Wealthsimple&#x27;s design language.">
+<meta name="theme-color" content="#f4f2ec" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#11110f" media="(prefers-color-scheme: dark)">
+<link rel="preload" href="fonts/archivo-reg.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="fonts/archivo-xcond.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="fonts/plexserif-light.woff" as="font" type="font/woff" crossorigin>
 <link rel="stylesheet" href="site.css">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23121211'/%3E%3Crect x='6' y='22' width='20' height='4' fill='%23d8241b'/%3E%3Ctext x='16' y='19' font-family='Arial' font-weight='700' font-size='14' fill='white' text-anchor='middle'%3ETL%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23121211'/%3E%3Crect x='6' y='22' width='20' height='4' fill='%23d8241b'/%3E%3Ctext x='16' y='19' font-family='Arial' font-weight='700' font-size='14' fill='white' text-anchor='middle'%3ETL%3C/text%3E%3C/svg%3E">
 </head>
 <body>
+<a class="skip" href="#work">Skip to experience</a>
 <header class="top">
   <div class="id">
-    <h1 class="name">Ty Lauriente</h1>
-    <p class="role">Software Engineer · C++ · Testing, tooling and live fixes · Vancouver, BC</p>
-  </div>
-  <nav class="links" aria-label="Contact and files">
-    <a href="mailto:tlauriente@gmail.com">tlauriente@gmail.com</a>
+    <h1 class="name"><span>Ty Lauriente</span></h1>
+    <p class="role"><span>Software Engineer · C++ · Testing, tooling and live fixes · Vancouver, BC</span></p>
+    <p class="contact"><a href="mailto:tlauriente@gmail.com">tlauriente@gmail.com</a>
     <a href="https://linkedin.com/in/ty-lauriente-ab923189" rel="me">linkedin.com/in/ty-lauriente-ab923189</a>
-    <a href="https://github.com/TyLauriente" rel="me">github.com/TyLauriente</a>
-    <a class="btn" href="Ty-Lauriente-Resume.pdf" download>PDF</a>
-    <a class="btn ghost" href="Ty-Lauriente-Resume.txt">Plain text</a>
+    <a href="https://github.com/TyLauriente" rel="me">github.com/TyLauriente</a></p>
+  </div>
+  <p class="lede">When something breaks, I look for what let it happen and fix&nbsp;that.</p>
+  <nav class="links" aria-label="Story and files">
+    <button class="btn play" type="button" data-story-open aria-haspopup="dialog"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 1.8v8.4L10 6z"/></svg>Play the story</button>
+    <a class="btn ghost" href="Ty-Lauriente-Resume.pdf" download>PDF</a>
   </nav>
 </header>
 
@@ -29,12 +36,12 @@
     <p class="summary">Software engineer with 7 years of C++ on large, shipped games: EA SPORTS FC since 2024, and Minecraft at SkyBox Labs before that. When something breaks, I look for what let it happen and fix that, so the same bug can't come back. I work methodically, with tests and soak runs that catch problems before players do, and tools that save other engineers the same work. With AI coding agents, I build systems that check and improve themselves. I've used Wealthsimple for years and it's now my only bank. I've long been into crypto, use DeFi exchanges like Hyperliquid, and build my own finance apps in Wealthsimple's design language.</p>
     <h2>At a glance</h2>
     <dl class="glance"><div><dt>7 years</dt><dd>C++ on large, shipped games</dd></div><div><dt>5</dt><dd>live-patch fixes in my first year at EA</dd></div><div><dt>~24 h</dt><dd>from escalation to a fix in testing, on a high-priority patch bug</dd></div><div><dt>709</dt><dd>tests in my portfolio dashboard</dd></div></dl>
-    <h2>Skills <span class="hint">point at one to see where it shows up</span></h2>
+    <h2>Skills <span class="hint">point at one</span></h2>
     <div class="skills"><p><b>Reliability and testing</b><span class="chip" data-match="soak">soak tests</span> <span class="chip" data-match="blocked any later change|tests with every change">tests that gate later changes</span> <span class="chip" data-match="determinis">determinism</span> <span class="chip" data-match="cause|timing bugs">root cause of timing bugs</span> <span class="chip" data-match="bisect">git bisect</span> <span class="chip" data-match="patch">live patches</span></p>
       <p><b>Languages and tools</b><span class="chip" data-match="C\+\+">C++</span> <span class="chip" data-match="Python">Python</span> <span class="chip" data-match="TypeScript">TypeScript</span> <span class="chip" data-match="Rust">Rust</span> <span class="chip-note">(personal projects)</span> <span class="chip" data-match="EA SPORTS FC|FC 2[67]">Frostbite</span> <span class="chip" data-match="git bisect">Perforce</span> <span class="chip" data-match="\bGit\b|git bisect">Git</span> <span class="chip" data-match="Visual\ Studio">Visual Studio</span> <span class="chip" data-match="Jira">Jira</span></p>
       <p><b>AI</b><span class="chip" data-match="Claude|AI coding agents">Claude Code</span> <span class="chip" data-match="ChatGPT">ChatGPT</span> <span class="chip" data-match="Copilot">Copilot</span> <span class="chip" data-match="AI coding sessions|AI coding agents">running several agents in parallel</span> <span class="chip" data-match="watcher|checks each session|risk checks">independent review and automated checks on agent work</span></p></div>
     <h2>Education</h2>
-    <p>LaSalle College Vancouver · Programming diploma</p>
+    <p class="edu">LaSalle College Vancouver · Programming diploma</p>
   </section>
 
   <section class="col" id="work" aria-labelledby="h-work">
@@ -67,12 +74,105 @@
     <article class="proj"><h3>Crypto trading</h3><span class="meta">Python · Mar - Oct 2026</span><p>Trading bots for DeFi exchanges (Hyperliquid, and Jupiter on Solana) with backtesting and paper trading. In the latest, an AI agent (Claude) trades a small real-money account on Hyperliquid and Strike Finance. Only one process holds the trading key, every order passes risk checks first, a halt switch stops it, and every action is logged.</p></article>
   </section>
 </main>
+<svg class="wires" aria-hidden="true"></svg>
 
 <nav class="tabs" aria-label="Sections">
   <a href="#about" data-tab="about">Summary</a>
   <a href="#work" data-tab="work">Experience</a>
   <a href="#projects" data-tab="projects">Projects</a>
 </nav>
-<script src="site.js"></script>
+
+<div class="story" role="dialog" aria-modal="true" aria-label="The story, in nine scenes" hidden>
+  <div class="story__bar">
+    <span class="story__count" aria-live="polite"><b>1</b> / 9</span>
+    <div class="story__progress" aria-hidden="true"><i></i></div>
+    <button class="story__close" type="button" data-story-close aria-label="Close the story">Close <kbd>Esc</kbd></button>
+  </div>
+  <ol class="story__rail" aria-label="Scenes"></ol>
+  <div class="story__scenes">
+
+    <section class="scene s-years" data-title="Seven years">
+      <p class="kicker">01 · The work</p>
+      <h2 class="display">Seven years of C++ on large, shipped&nbsp;games.</h2>
+      <div class="years" aria-hidden="true">
+        <div class="years__axis"><span>2019</span><span>2020</span><span>2021</span><span>2022</span><span>2023</span><span>2024</span><span>2025</span><span>2026</span></div>
+        <div class="years__bar a"><b>SkyBox Labs</b> Minecraft · Junior to Software Engineer 3</div>
+        <div class="years__bar b"><b>Electronic Arts</b> EA SPORTS FC · Software Engineer 3</div>
+      </div>
+      <p class="caption">Five years on Minecraft's cross-platform C++ codebase, then gameplay on EA SPORTS FC: FC 26, FC 27 and the next title.</p>
+    </section>
+
+    <section class="scene s-cause" data-title="Find the cause">
+      <p class="kicker">02 · How I fix things</p>
+      <h2 class="display">When something breaks, I look for what let it&nbsp;happen.</h2>
+      <ol class="chain">
+        <li><span>What broke</span>An assert kept showing up in soak tests.</li>
+        <li><span>The cause</span>Two data entries had been added without their own scene types, so the last two types would always fail a bounds check.</li>
+        <li><span>The fix</span>Fixed the cause. Both duplicate reports closed with it.</li>
+      </ol>
+    </section>
+
+    <section class="scene s-gate" data-title="Keep it fixed">
+      <p class="kicker">03 · Then it stays fixed</p>
+      <h2 class="display">Tests that stop the same bug coming&nbsp;back.</h2>
+      <div class="gate" aria-hidden="true">
+        <div class="gate__lane"><i></i><i></i><i class="bad"></i><i></i><i></i></div>
+        <div class="gate__post"><span>tests</span></div>
+      </div>
+      <p class="caption">At SkyBox, every change I made came with tests for the feature, its edge cases and the problems we could see coming. Those tests then blocked any later change, from anyone, that broke it.</p>
+    </section>
+
+    <section class="scene s-clock" data-title="On the clock">
+      <p class="kicker">04 · Live patches</p>
+      <h2 class="display">About 24 hours, escalation to a fix in&nbsp;testing.</h2>
+      <div class="clock" aria-hidden="true">
+        <svg viewBox="0 0 200 200"><circle class="clock__track" cx="100" cy="100" r="84"/><circle class="clock__arc" cx="100" cy="100" r="84"/></svg>
+        <div class="clock__label"><b data-count="24">24</b><span>hours</span></div>
+      </div>
+      <p class="caption">A high-priority patch bug, fixed in time for the patch cutoff. Five patch fixes in my first year, and patch fixes on FC 27 since its release.</p>
+    </section>
+
+    <section class="scene s-coin" data-title="Other teams">
+      <p class="kicker">05 · Without anyone changing their code</p>
+      <h2 class="display">One rule, and other teams' scenes play more&nbsp;often.</h2>
+      <div class="coin" aria-hidden="true"><div class="coin__face"><span>gameplay scene</span><span>other teams' scene</span></div></div>
+      <p class="caption">A deterministic coin-toss rule I co-designed: on throw-ins, gameplay skips its own scene half the time and tells other systems. Crowd chants and other teams' scenes now play more often, with no changes on their side.</p>
+    </section>
+
+    <section class="scene s-tools" data-title="Tools">
+      <p class="kicker">06 · Saving the next engineer the work</p>
+      <h2 class="display">Tools people kept&nbsp;using.</h2>
+      <div class="term" aria-hidden="true"><p><i>$</i> soak test, one step</p><p class="out">latest build ready · overnight run started</p><p><i>$</i> document this area of the code</p><p class="out">written up for every gameplay engineer</p></div>
+      <p class="caption">A Python script that sets up an overnight soak test in one step, still used by other engineers five months later. An AI prompt that documents any area of the code, shared with all gameplay engineers at a senior engineer's request.</p>
+    </section>
+
+    <section class="scene s-money" data-title="My money">
+      <p class="kicker">07 · Built for my own Wealthsimple portfolio</p>
+      <h2 class="display">A price nobody has confirmed turns amber in 75&nbsp;seconds.</h2>
+      <figure class="spark" aria-hidden="true"><svg><path class="spark__line"/><circle class="spark__dot" r="5"/></svg><figcaption><b class="spark__px">BTC</b><span class="spark__age">confirmed 0 s ago</span></figcaption></figure>
+      <p class="caption">A self-hosted live dashboard: prices stream from several sources, each feed runs in its own supervised loop so a crash restarts the loop and not the service, and it applies the superficial-loss rule and CRA limits across accounts. 709 tests. The chart above replays bitcoin from the demo's recording.</p>
+      <a class="btn" href="portfolio-demo/">Open the live demo</a>
+    </section>
+
+    <section class="scene s-agents" data-title="Agents">
+      <p class="kicker">08 · AI agents, with checks</p>
+      <h2 class="display">Systems that check their own&nbsp;work.</h2>
+      <div class="flow" aria-hidden="true"><span>agent</span><i></i><span>watcher checks what actually ran</span><i></i><span>rule changes kept only if they help</span></div>
+      <p class="caption">My Claude Code Dashboard runs all my AI coding sessions; a read-only watcher checks each session's claims against what actually ran. In my crypto trading agent only one process holds the trading key, every order passes risk checks first, a halt switch stops it, and every action is logged.</p>
+    </section>
+
+    <section class="scene s-end" data-title="Contact">
+      <p class="kicker">09 · Thanks for watching</p>
+      <h2 class="display">Let's talk.</h2>
+      <p class="end__links"><a href="mailto:tlauriente@gmail.com">tlauriente@gmail.com</a>
+    <a href="https://linkedin.com/in/ty-lauriente-ab923189" rel="me">linkedin.com/in/ty-lauriente-ab923189</a>
+    <a href="https://github.com/TyLauriente" rel="me">github.com/TyLauriente</a></p>
+      <p><a class="btn" href="Ty-Lauriente-Resume.pdf" download>Download the PDF</a> <button class="btn ghost" type="button" data-story-close>Back to the resume</button></p>
+    </section>
+
+  </div>
+  <p class="story__hint" aria-hidden="true">Scroll, swipe or use the arrow keys</p>
+</div>
+<script src="site.js" defer></script>
 </body>
 </html>
