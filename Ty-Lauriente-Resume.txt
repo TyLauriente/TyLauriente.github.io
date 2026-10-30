@@ -20,7 +20,7 @@ Software Engineer 3, Gameplay · Vancouver, BC
 
 - Traced an assert that kept showing up in soak tests to its cause: two data entries added without their own scene types meant the last two types would always fail a bounds check. Fixing the cause closed both duplicate reports.
 
-- Wrote a Python script that sets up an overnight soak test in one step, still used by other engineers five months later.
+- Wrote a Python script that sets up a soak test on the latest build in one step, still used by other engineers five months later.
 
 - Co-designed a deterministic coin-toss rule: on throw-ins, gameplay skips its own scene half the time and tells other systems, so crowd chants and other teams' scenes play more often with no changes on their side. Built so later conflicts can reuse it.
 
