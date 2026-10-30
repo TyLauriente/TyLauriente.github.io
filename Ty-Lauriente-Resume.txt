@@ -22,7 +22,7 @@ Software Engineer 3, Gameplay · Vancouver, BC
 
 - Wrote a Python script that sets up a soak test on the latest build in one step, still used by other engineers five months later.
 
-- Built Atlas, a local AI tool that searches our team's Slack and opens on what needs me. Given to a couple of developers so far.
+- Built Atlas with AI coding agents: a local AI tool that searches our team's Slack. Given to a couple of developers so far.
 
 - Co-designed a deterministic coin-toss rule: on throw-ins, gameplay skips its own scene half the time and tells other systems, so crowd chants and other teams' scenes play more often with no changes on their side. Built so later conflicts can reuse it.
 

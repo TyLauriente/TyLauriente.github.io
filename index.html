@@ -52,7 +52,7 @@
       <li>Redesigned how these scenes are chosen, set up, played and skipped as my first task, with a senior engineer's guidance, which made later features easier to add. Checked it with overnight soaks, a pass over every scene, four reviewers and git bisect.</li>
       <li>Traced an assert that kept showing up in soak tests to its cause: two data entries added without their own scene types meant the last two types would always fail a bounds check. Fixing the cause closed both duplicate reports.</li>
       <li>Wrote a Python script that sets up a soak test on the latest build in one step, still used by other engineers five months later.</li>
-      <li>Built Atlas, a local AI tool that searches our team's Slack and opens on what needs me. Given to a couple of developers so far.</li>
+      <li>Built Atlas with AI coding agents: a local AI tool that searches our team's Slack. Given to a couple of developers so far.</li>
       <li>Co-designed a deterministic coin-toss rule: on throw-ins, gameplay skips its own scene half the time and tells other systems, so crowd chants and other teams' scenes play more often with no changes on their side. Built so later conflicts can reuse it.</li>
       <li>Fixed timing bugs before launch and in live patches for FC 26 and FC 27 (5 patch fixes in my first year), like mascots walking through stadium walls. Had a high-priority patch fix in testing about 24 hours after it was escalated, in time for the patch cutoff.</li>
       <li>Wrote the gameplay engineering notes and estimates for three FC 27 feature plans, and reviewed a fourth.</li>
